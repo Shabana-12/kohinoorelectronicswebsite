@@ -1,0 +1,332 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bree Serif', serif;
+    
+    }
+    
+    /* navigation bar  */
+    #myNav{
+    
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: 0px;
+
+    }
+    /* logo and image */
+    #logo{
+        margin: 2px 1px;
+    }   
+    
+    #logo img{
+        height: 69px;
+        margin: 3px 4px;
+    }
+    
+    
+    #myNav ul{
+        display: flex;
+    }
+    
+    #myNav::before{
+        content: "";
+        background-color: rgb(80, 78, 78);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.4;
+        border-radius: 5px;
+    
+    }
+    
+    #myNav ul li{
+        list-style: none;
+        font: 1.3rem;
+    }
+    
+    #myNav ul li a{
+        color: white;
+        display: block;
+        padding: 2px 23px;
+        border-radius: 20px;
+        text-decoration: none;
+    }
+    
+    #myNav ul li a:hover{
+        color: black;
+        background-color: white;
+       
+    }
+    #home{
+    
+        display: flex;
+        flex-direction: column;
+        height: 670px;
+        padding: 2px 200px;
+        justify-content: center;
+        align-items: center;
+    }
+    #home::before{
+        content: "";
+        background:url('/brg_main.jpg') no-repeat center center/cover;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        /* opacity: 0.80; */
+    }
+    
+    #home h1{
+        color: white;
+        text-align: center;
+    }
+    
+    #home p{
+        color: white;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    #services{
+        margin: 3px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #services .box{
+        border: 2px solid brown;
+        padding: 34px;
+        margin: 3px 6px;
+        border-radius: 25px;
+        background-color: rgb(240, 222, 188);
+        flex-wrap: wrap;
+        
+    }
+    #services .box img{
+        display: block;
+        height: 160px;
+        margin: auto;
+    }
+    
+    #clients{
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #client-section{
+        height: 207px;
+        /* display: flex;
+        flex-wrap: wrap; */
+        /* justify-content: center;
+        text-align: center; */
+    
+       }
+    
+       #client-section::before{
+        content: "";
+        position: absolute;
+        height: 26%;
+        width: 100%;
+        background: url(/client_bg.jpg);
+        z-index: -1;
+        opacity: 0.40;
+        border-radius: 30px;
+       }
+    
+    #clients img{
+        height: 64px;
+    }
+    
+    .client-item{
+        padding: 12px;
+    }
+    
+    #contact{
+        position: relative;
+    }
+    
+    #contact-box form{
+        width: 40%;
+    }
+    
+    #contact::before{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        /* background: url(/contact_us.jpg) no-repeat center center/cover; */
+        opacity: 0.50;
+    }
+    footer{
+        background: black;
+        color: white;
+        padding: 2px 6px;
+        font-size: 0.8rem;
+    }
+    
+    .contact-box{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        /* align-items: center; */
+      
+    }
+    .contact-box input, .contact-box textarea{
+        width: 100%;
+        padding: 0.5px;
+        border-radius: 6px;
+        font-size: 1.1rem;
+     
+    }
+    .contact-box input{
+        justify-content: center;
+        align-items: left;
+    }
+    
+    .abt-box{
+        display: flex;
+        height: 50%;
+        margin-bottom: 20px;
+    }
+    #abt-us{
+        padding: 39px;
+        margin-top: 10px;
+        
+    }
+    .abt-us-container img{
+        border: 2px solid red;
+        width: 50%;
+    }
+
+    .abt-us-container .box{
+        display: flex;
+        /* border: 2px solid hotpink; */
+        margin: 12px;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    /* utility section  */
+    .h-primary{
+        padding: 12px;
+        font-size: 2.8rem;
+    }
+    
+    .h-secondary center{
+    
+        padding: 12px;
+        font-size: 1.8rem;
+    }
+    #btn{
+    
+        padding: 6px 20px;
+        border: 2px solid white;
+        background-color: brown;
+        color: white;
+        margin: 17px;
+        font-size: 1.3rem;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    #btnCnt{
+    
+        padding: 6px 20px;
+        border: 2px solid white;
+        background-color: brown;
+        color: white;
+        margin: 17px;
+        font-size: 1.3rem;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .center{
+        text-align: center;
+    }
+    #client-section h1{
+        text-align: center;
+    }
+    .contact-box #address{
+        /* height: 100%; */
+        width:20%;
+        justify-content: left;
+        margin-bottom: 15%;
+        /* margin: 2px 5px 5px 5px; */
+    }
+    #address li{
+        list-style: none;
+       
+    }
+    #eID{
+        color: blue;
+    }
+    .contact-box #address{
+       
+        width: 37%;
+    }
+    #dir-img{
+        width: 120px;
+        border-radius: 30%;
+        display: inline-block;
+    }
+    .mySlides-fade img{
+        height: 700px;
+    }
+    #h-primary{
+        display: flex;
+        justify-content: center;
+        padding: 12px;
+        font-size: 2.2rem;
+        background-color: orange;
+        opacity: 0.80;
+    }
+    .slideshow-container p{
+        justify-content: center;
+    }
+
+    .slideshow-container img{
+        z-index: -1;
+        position: relative;
+    }
+    .center{
+        justify-content: center;
+        align-items: center;
+    }
+    .mySlides-fade{
+        height: 600px;
+        position: relative;
+    }
+    #abtus{
+        border: 2px solid green;
+    }
+    #dir_pic{
+        border-radius: 40px;
+    }
+
+    #dist{
+        width: 63%;
+        /* border-radius: 15px; */
+        height: 739px;
+        padding: 8px;
+        /* margin: auto; */
+        display: flex;
+        display: inline-flex;
+    
+    }
+    .dis_mp_ser_area{
+        display: flex;
+        border: 2px solid tomato;
+        width: 97vw;
+        /* float: right; */
+    }
+
+    #msg_sent{
+        justify-content: center;
+        align-items: center;
+    }

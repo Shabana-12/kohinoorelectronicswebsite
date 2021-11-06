@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Kohinoor Electronics</title>
+
+    
+</head>
+
+<body>
+    <nav id="myNav">
+
+        <div id="logo"><img src="{{url_for('static', filename='Logo.jpg')}}" /></div>
+        <ul>
+            <li class="item"><a href="/">Home</a></li>
+            <li class="item"><a href="#services">Our Services</a></li>
+            <li class="item"><a href="#about_us">About Us</a></li>
+
+            <li class="item"><a href="#contact">Contact Us</a></li>
+            <li class="item" id="phNm">Call us : 96651 61165</li>
+        </ul>
+    </nav>
+<div id="msg_sent">
+    {% for message in get_flashed_messages() %}
+
+    <h4>{{ message }}</h4>
+    {% endfor %}
+</div>
+  
+
+    <div class="slideshow-container" >
+        <h1 id="h-primary">Welcome to Kohinoor Electronics, Latur</h1>
+     
+            <img class="mySlides-fade" src="{{url_for('static', filename='img1.jpeg')}}" style="width:100%" height="80%">
+            <img class="mySlides-fade" src="{{url_for('static', filename='img2.jpeg')}}" style="width:100%" height="80%">
+            <img class="mySlides-fade" src="{{url_for('static', filename='img3.jpeg')}}" style="width:100%" height="80%">
+            <img class="mySlides-fade" src="{{url_for('static', filename='img4.jpeg')}}" style="width:100%" height="80%">
+   
+        </div>
+  
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides-fade");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+    <section class="abt-us-container">
+
+        <h1 class="h-primary center">About Us</h1>
+
+        <div class="abt-box" id="about_us">
+            <div class="box">
+                <img src="{{url_for('static', filename='certificate.jpg')}}" />
+                
+                <p class="center">Kohinoor electronics is an authorized electronic product installation and repairing service center situated in Latur.</p>
+                <p>Service center is appreciated by the various well reputated electronic brands. Exp. MI, Micromax, Sansui, Skyworth etc.</p>
+                <p>Looking at the consistant performance Kohinoor has been appreciated by the various companies like VEGO, MI, Micromax</p>
+            </div>
+            <div class="box">
+                <img id="dir_pic" src="{{url_for('static', filename='director_pic.jpg')}}" />
+                <!-- <h2 class="h-secondary center">A/c, Washing machine installation & repairing</h2> -->
+               
+                <p class="center">Kohinoor Service center has started in 2016. It is founded by Mr. Mukram Pathan. He is been working in the electronic product services from 10+ years. Now Kohioor is serving for well reputated electronic brands in the market.</p>
+            </div>
+           
+        </div>
+
+    </section>
+    <section class="services-container">
+        <h1 class="h-primary center">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="{{url_for('static', filename='TV_Repairing.png')}}" />
+                <h2 class="h-secondary center">TV Repairing & Installation</h2>
+                <p class="center">We provide services for all brand TV installation and repairing</p>
+            </div>
+            <div class="box">
+                <img src="{{url_for('static', filename='Ac_repaing.jpg')}}" />
+                <h2 class="h-secondary center">A/c, Washing machine installation & repairing</h2>
+                <p class="center">We provide services for all brand A/c, Washing machine installation & repairing</p>
+            </div>
+            <div class="box">
+                <img src="{{url_for('static', filename='Refrigerator_repairing.jpg')}}" />
+                <h2 class="h-secondary center">Fridge, Cooler Repairing</h2>
+                <p class="center">We provide services for all brand Fridge, Cooler Repairing</p>
+            </div>
+            <div class="box">
+                <img src="{{url_for('static', filename='microwave-oven-repairing2-min.jpg')}}" />
+                <h2 class="h-secondary center">Microwave, Water purifier repairing</h2>
+                <p class="center">We provide services for all brand Microwave, Water purifier repairing</p>
+            </div>
+
+        </div>
+    </section>
+
+        <!-- <section>
+            <div class="dis_mp_ser_area">
+                <img id="dist" src="/static/latur-tehsil-map.jpg" alt="image loading">
+                <div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae consectetur, sunt ea dolores quo rem nihil sint animi culpa, distinctio totam minima sequi sed dolore? Reiciendis veniam ratione assumenda odio?</p>
+                </div>
+            </div>
+            
+        </section> -->
+
+    <section id="client-section">
+
+        <h1 class="h-primary Center">Our Clients</h1>
+
+        <div id="clients">
+            <div class="client-item">
+                <img src="{{url_for('static', filename='mi_logo.png')}}" />
+            </div>
+
+            <div class="client-item">
+                <img src="{{url_for('static', filename='micromax_logo.jpg')}}" />
+            </div>
+            <div class="client-item">
+                <img src="{{url_for('static', filename='onida-logo.jpg')}}" />
+            </div>
+            <div class="client-item">
+                <img src="{{url_for('static', filename='Sansui_logo.jpg')}}" />
+            </div>
+            <div class="client-item">
+                <img src="{{url_for('static', filename='skyworth_logo.jpg')}}" />
+            </div>
+            <div class="client-item">
+                <img src="{{url_for('static', filename='Metz_Logo.jpg')}}" />
+            </div>
+            <div class="client-item">
+                <img src="{{url_for('static', filename='mcCoy-logo.png')}}" />
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+
+
+        <div class="contact-box">
+            <div id="address">
+                <h4>Address : </h4>
+
+                <li>Kohinoor Electronics</li>
+                <li>Near Kelgaonkar Hospital,</li>
+                <li>Ambajaogai Road,</li>
+                <li>Latur - 413 512.</li>
+                <li>Mob - 96651 61165</li>
+                <li id="eID">email ID : kohinoorelect01@gmail.com</li>
+                <p id="addMap"><iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30276.923746025048!2d76.56681003955076!3d18.455760400000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcf8584d88b2e2f%3A0x9351e3b2ff24d56f!2skohinoor%20electronics-micromax%20authorised%20service!5e0!3m2!1sen!2sin!4v1632672119342!5m2!1sen!2sin"
+                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
+            </div>
+            <!-- {% for message in get_flashed_messages() %}
+                
+            <h4>{{ message }}</h4>
+            {% endfor %} -->
+            <form action="/contact" method='POST'>
+                <div class="form-group">
+                    <label for="name">Name :</label>
+                    <input type="text" name=name id="name" placeholder="enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input type="email" name=email id="name" placeholder="enter your email ID">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number :</label>
+                    <input type="phone" name=phone id="phone" placeholder="enter your phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="your message"></textarea>
+                    <button id="btn">Send</button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="center">
+            Copyright &copy; www.kohinoorelectronics.com. All rights reserved !
+        </div>
+    </footer>
+</body>
+
+</html>
