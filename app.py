@@ -1,17 +1,17 @@
-from flask import Flask, render_template, request, redirect, url_for, session, flash
-import re
+from flask import Flask, render_template, request, session, flash
+
 from flask_mail import Mail, Message
 mail = Mail()
 app = Flask(__name__)
 app.secret_key = 'your secret key'
 
-# app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-# app.config['MAIL_PORT'] = 465
-# app.config['MAIL_USERNAME'] = 'apexinfotechexcellenceco@gmail.com'
-# app.config['MAIL_PASSWORD'] = 'Fs@Da@25$7'
-# app.config['MAIL_USE_TLS'] = False
-# app.config['MAIL_USE_SSL'] = True
-# mail = Mail(app)
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = 'apexinfotechexcellenceco@gmail.com'
+app.config['MAIL_PASSWORD'] = 'Fs@Da@25$7'
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+mail = Mail(app)
 # # key=API_KEY
 # AIzaSyDkxEx1kmjj62v5yriRA4z3G3sJBxml14g
 @app.route("/")
