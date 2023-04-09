@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, session, flash
 from flask_mail import Mail, Message
 mail = Mail()
 app = Flask(__name__)
-app.secret_key = 'your secret key'
+app.secret_key = 'apexinfotech'
 
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
